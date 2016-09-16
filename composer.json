@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": "~5.5|~7.0",
-        "umulmrum/holiday": "dev-master",
+        "umulmrum/holiday": "~0.1",
         "symfony/translator": "@stable"
     },
     "autoload": {
