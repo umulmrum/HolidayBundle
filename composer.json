@@ -1,0 +1,30 @@
+{
+    "name": "umulmrum/holiday-bundle",
+    "description": "A Symfony integration bundle for the umulmrum/holiday library",
+    "keywords": [
+      "holiday",
+      "holidays",
+      "calendar",
+      "date",
+      "time",
+      "bundle",
+      "symfony"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefan Kruppa",
+            "email": "stefan@umulmrum.de"
+        }
+    ],
+    "require": {
+        "php": "~5.5|~7.0",
+        "umulmrum/holiday": "dev-master",
+        "symfony/translator": "@stable"
+    },
+    "autoload": {
+      "psr-4": {
+        "umulmrum\\HolidayBundle\\": ""
+      }
+    }
+}

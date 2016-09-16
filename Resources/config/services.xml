@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- filters start -->
+        <service id="umulmrum_holiday.filter.include_holiday_name" class="umulmrum\Holiday\Filter\IncludeHolidayNameFilter">
+        </service>
+
+        <service id="umulmrum_holiday.filter.include_timespan" class="umulmrum\Holiday\Filter\IncludeTimespanFilter">
+        </service>
+
+        <service id="umulmrum_holiday.filter.include_type" class="umulmrum\Holiday\Filter\IncludeTypeFilter">
+        </service>
+
+        <service id="umulmrum_holiday.filter.include_unique_date" class="umulmrum\Holiday\Filter\IncludeUniqueDateFilter">
+        </service>
+
+        <service id="umulmrum_holiday.filter.include_weekday" class="umulmrum\Holiday\Filter\IncludeWeekdayFilter">
+        </service>
+
+        <service id="umulmrum_holiday.filter.sort_by_date" class="umulmrum\Holiday\Filter\SortByDateFilter">
+        </service>
+        <!-- filters end -->
+
+        <!-- formatters start -->
+        <service id="umulmrum_holiday.formatter.date" class="umulmrum\Holiday\Formatter\DateFormatter">
+        </service>
+
+        <service id="umulmrum_holiday.formatter.icalendar" class="umulmrum\Holiday\Formatter\ICalendarFormatter">
+            <argument type="service" id="umulmrum_holiday.translator.symfony_bridge" />
+        </service>
+
+        <service id="umulmrum_holiday.formatter.json" class="umulmrum\Holiday\Formatter\JsonFormatter">
+            <argument type="service" id="umulmrum_holiday.translator.symfony_bridge" />
+        </service>
+
+        <service id="umulmrum_holiday.formatter.name" class="umulmrum\Holiday\Formatter\NameFormatter">
+            <argument type="service" id="umulmrum_holiday.translator.symfony_bridge" />
+        </service>
+
+        <service id="umulmrum_holiday.formatter.timestamp" class="umulmrum\Holiday\Formatter\TimestampFormatter">
+        </service>
+        <!-- formatters end -->
+
+        <!-- translators start -->
+        <service id="umulmrum_holiday.translator.symfony_bridge" class="umulmrum\Holiday\Translator\SymfonyBridgeTranslator">
+            <argument type="service" id="translator"/>
+        </service>
+        <!-- translators end -->
+
+        <!-- Germany start -->
+        <service id="umulmrum_holiday.calculator.holiday_calculator.germany" class="umulmrum\Holiday\Calculator\HolidayCalculator">
+            <argument type="service" id="umulmrum_holiday.provider.germany.germany_holiday_initializer" />
+        </service>
+
+        <service id="umulmrum_holiday.provider.germany.germany_holiday_initializer" class="umulmrum\Holiday\Provider\Germany\GermanyHolidayInitializer">
+        </service>
+
+        <service id="umulmrum_holiday.helper.holiday_helper.germany" class="umulmrum\Holiday\Helper\HolidayHelper">
+            <argument type="service" id="umulmrum_holiday.calculator.holiday_calculator.germany" />
+        </service>
+        <!-- Germany end -->
+    </services>
+
+</container>
