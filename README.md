@@ -66,7 +66,7 @@ By submitting a PR you agree that all your contributed code may be used under th
 
 ## License
 
-The HolidayBundle is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+The HolidayBundle is licensed under the MIT License. See [LICENSE](Resources/meta/LICENSE) for details.
 
 In short, this license allows you to use this code for almost anything you like. If you somehow make use of it to
 suppress, injure, kill, spy, or any other thing considered evil, there is nothing in this license that holds you back. 
