@@ -1,7 +1,7 @@
 
 # HolidayBundle
 
-Holiday is a simple integration bundle for the umulmrum/Holiday library.
+Holiday is a simple integration bundle for the umulmrum/holiday library.
 See the documentation in that library for details
 
 ## Requirements
