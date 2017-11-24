@@ -7,60 +7,60 @@
     <services>
 
         <!-- filters start -->
-        <service id="umulmrum_holiday.filter.include_holiday_name" class="umulmrum\Holiday\Filter\IncludeHolidayNameFilter">
+        <service id="umulmrum_holiday.filter.include_holiday_name" class="umulmrum\Holiday\Filter\IncludeHolidayNameFilter" public="true">
         </service>
 
-        <service id="umulmrum_holiday.filter.include_timespan" class="umulmrum\Holiday\Filter\IncludeTimespanFilter">
+        <service id="umulmrum_holiday.filter.include_timespan" class="umulmrum\Holiday\Filter\IncludeTimespanFilter" public="true">
         </service>
 
-        <service id="umulmrum_holiday.filter.include_type" class="umulmrum\Holiday\Filter\IncludeTypeFilter">
+        <service id="umulmrum_holiday.filter.include_type" class="umulmrum\Holiday\Filter\IncludeTypeFilter" public="true">
         </service>
 
-        <service id="umulmrum_holiday.filter.include_unique_date" class="umulmrum\Holiday\Filter\IncludeUniqueDateFilter">
+        <service id="umulmrum_holiday.filter.include_unique_date" class="umulmrum\Holiday\Filter\IncludeUniqueDateFilter" public="true">
         </service>
 
-        <service id="umulmrum_holiday.filter.include_weekday" class="umulmrum\Holiday\Filter\IncludeWeekdayFilter">
+        <service id="umulmrum_holiday.filter.include_weekday" class="umulmrum\Holiday\Filter\IncludeWeekdayFilter" public="true">
         </service>
 
-        <service id="umulmrum_holiday.filter.sort_by_date" class="umulmrum\Holiday\Filter\SortByDateFilter">
+        <service id="umulmrum_holiday.filter.sort_by_date" class="umulmrum\Holiday\Filter\SortByDateFilter" public="true">
         </service>
         <!-- filters end -->
 
         <!-- formatters start -->
-        <service id="umulmrum_holiday.formatter.date" class="umulmrum\Holiday\Formatter\DateFormatter">
+        <service id="umulmrum_holiday.formatter.date" class="umulmrum\Holiday\Formatter\DateFormatter" public="true">
         </service>
 
-        <service id="umulmrum_holiday.formatter.icalendar" class="umulmrum\Holiday\Formatter\ICalendarFormatter">
+        <service id="umulmrum_holiday.formatter.icalendar" class="umulmrum\Holiday\Formatter\ICalendarFormatter" public="true">
             <argument type="service" id="umulmrum_holiday.translator.symfony_bridge" />
         </service>
 
-        <service id="umulmrum_holiday.formatter.json" class="umulmrum\Holiday\Formatter\JsonFormatter">
+        <service id="umulmrum_holiday.formatter.json" class="umulmrum\Holiday\Formatter\JsonFormatter" public="true">
             <argument type="service" id="umulmrum_holiday.translator.symfony_bridge" />
         </service>
 
-        <service id="umulmrum_holiday.formatter.name" class="umulmrum\Holiday\Formatter\NameFormatter">
+        <service id="umulmrum_holiday.formatter.name" class="umulmrum\Holiday\Formatter\NameFormatter" public="true">
             <argument type="service" id="umulmrum_holiday.translator.symfony_bridge" />
         </service>
 
-        <service id="umulmrum_holiday.formatter.timestamp" class="umulmrum\Holiday\Formatter\TimestampFormatter">
+        <service id="umulmrum_holiday.formatter.timestamp" class="umulmrum\Holiday\Formatter\TimestampFormatter" public="true">
         </service>
         <!-- formatters end -->
 
         <!-- translators start -->
-        <service id="umulmrum_holiday.translator.symfony_bridge" class="umulmrum\Holiday\Translator\SymfonyBridgeTranslator">
+        <service id="umulmrum_holiday.translator.symfony_bridge" class="umulmrum\Holiday\Translator\SymfonyBridgeTranslator" public="true">
             <argument type="service" id="translator"/>
         </service>
         <!-- translators end -->
 
         <!-- Germany start -->
-        <service id="umulmrum_holiday.calculator.holiday_calculator.germany" class="umulmrum\Holiday\Calculator\HolidayCalculator">
+        <service id="umulmrum_holiday.calculator.holiday_calculator.germany" class="umulmrum\Holiday\Calculator\HolidayCalculator" public="true">
             <argument type="service" id="umulmrum_holiday.provider.germany.germany_holiday_initializer" />
         </service>
 
-        <service id="umulmrum_holiday.provider.germany.germany_holiday_initializer" class="umulmrum\Holiday\Provider\Germany\GermanyHolidayInitializer">
+        <service id="umulmrum_holiday.provider.germany.germany_holiday_initializer" class="umulmrum\Holiday\Provider\Germany\GermanyHolidayInitializer" public="true">
         </service>
 
-        <service id="umulmrum_holiday.helper.holiday_helper.germany" class="umulmrum\Holiday\Helper\HolidayHelper">
+        <service id="umulmrum_holiday.helper.holiday_helper.germany" class="umulmrum\Holiday\Helper\HolidayHelper" public="true">
             <argument type="service" id="umulmrum_holiday.calculator.holiday_calculator.germany" />
         </service>
         <!-- Germany end -->
