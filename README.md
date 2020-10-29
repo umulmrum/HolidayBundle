@@ -1,14 +1,15 @@
-
 # HolidayBundle
 
 Holiday is a simple integration bundle for the umulmrum/holiday library.
-See the documentation in that library for details
+See the documentation in that library for details.
+
+> This bundle is no longer maintained. The holiday lib was changed and simplified significantly and does no longer need
+> Symfony integration. 
 
 ## Requirements
 
-- PHP >= 5.4
-
-- Symfony translator in any version is recommended for translations
+- PHP >= 5.4 for umulmrum/holiday 0.1.x, PHP >= 7.1 for umulmrum/holiday 0.2.x and greater.
+- Symfony translator in any version is recommended for translations.
 
 That's it really.
 
@@ -58,9 +59,9 @@ class AppKernel extends Kernel
 
 Contributions are highly welcome. Please follow these rules when submitting a PR:
 
-- mimic existing code for style and structure
-- add unit tests for (almost )all of your code
-- use the Symfony code style (php-cs-fixer with symfony level)
+- Mimic existing code for style and structure.
+- Add unit tests for (almost )all of your code.
+- Use the Symfony code style (php-cs-fixer with symfony level).
 
 By submitting a PR you agree that all your contributed code may be used under the MIT license.
 
